@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_primary_dark"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sp_rectangle_root">
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="20dp"
+            android:hint="Username"
+            android:textColorHint="#80000000" />
+
+        <View
+            android:layout_below="@+id/et_username"
+            android:background="#80000000"
+            android:id="@+id/v_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:password="true"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_outline_lock_24"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/v_separator"
+            android:hint="********"
+            android:textColorHint="#80000000"/>
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/design_default_color_on_primary"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rl_input"
+        android:text="Login"
+        android:textSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/forgot"
+        android:textColor="@color/design_default_color_on_primary"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_input"
+        android:text="Forgot?"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:background="@drawable/sp_rectangle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgot"
+        android:layout_marginTop="40dp"
+        app:backgroundTint="@color/white"
+        android:drawablePadding="20dp"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_login"
+        android:layout_marginRight="25dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        app:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
